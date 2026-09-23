@@ -1,0 +1,34 @@
+{
+  "source": "paper/data/table_s1_full_alignment.csv",
+  "sha256": "8ae3088ada91086a2fbb0b3da8e9aaace4b5caa15cb279c341a07877308d2068",
+  "source_rows": 143,
+  "robustness_source": "paper/data/w1_robustness/alignment_summary.csv",
+  "robustness_sha256": "47bd39f266b8a316b0278790fb74acc330e4bc312e4a1c60125511fe8b2aa692",
+  "fixed_bacterial_controls_favorable_on_both": 12,
+  "illustrations": [
+    "01_workflow",
+    "02_perturbations",
+    "03_protocols",
+    "04_ag",
+    "05_oc",
+    "07_axis_convention"
+  ],
+  "data_figure": "06_result_matrix",
+  "toy_ag_values": [
+    0.0019960079840319355,
+    0.7619047619047619
+  ],
+  "note": "No new experiments or inferential analyses; retained point estimates and adjusted tests only.",
+  "font": "DejaVu Sans",
+  "language": "en",
+  "perturbation_labels": "Descriptive names; no implementation IDs displayed",
+  "outputs": {
+    "01_workflow.png": "4ec39cfbd7863aca0f086033be32409f3b065135fa6520a6ed0c5aaadef19ff9",
+    "02_perturbations.png": "619b17186333081e9403ae3ecb0e58714dc3356042e70d61c23eb3fa9c35c841",
+    "03_protocols.png": "a69654b786f709d2f69d4a7a4f4fb87420bd0b43b84c1e097d39ef24e2118c32",
+    "04_ag.png": "9fd6c15f544458cf0a49a90644ee53e36446f76b4604f774542c2feb37529316",
+    "05_oc.png": "b6e6e231acc2abc1ddfe31e8aa200d1c695aab73d5b43422d212644c773500c4",
+    "06_result_matrix.png": "a592b791395bd0594d54460054595bb948e96be545be2fa28dc5e8977c6e41df",
+    "07_axis_convention.png": "f8977789259935eac15608f96e09b12ab93171cc77f8e5f955562faf85d6c559"
+  }
+}
