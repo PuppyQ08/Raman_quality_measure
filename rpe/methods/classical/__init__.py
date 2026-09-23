@@ -1,0 +1,98 @@
+"""Deterministic classical Raman preprocessing pipelines."""
+
+from rpe.methods.classical.baseline import (
+    BaselineRunResult,
+    BaselineRunStatus,
+    BaselineWrapperError,
+    CapturedWarning,
+    run_baseline_system,
+)
+from rpe.methods.classical.baseline_canary import (
+    BaselineCanaryError,
+    BaselineCanarySource,
+    BaselineCanarySummary,
+    build_baseline_canary_from_sources,
+    load_rruff_baseline_canary_sources,
+    verify_baseline_canary_artifact,
+)
+from rpe.methods.classical.denoising import (
+    DenoisingFitContext,
+    DenoisingFitError,
+    DenoisingRunResult,
+    DenoisingRunStatus,
+    DenoisingWarning,
+    DenoisingWrapperError,
+    FittedDenoiser,
+    fit_denoising_system,
+    run_stateless_denoising_system,
+    transform_fitted_denoiser,
+)
+from rpe.methods.classical.denoising_canary import (
+    DenoisingCanaryError,
+    DenoisingCanarySummary,
+    build_denoising_canary_artifact,
+    load_denoising_canary_config,
+    load_denoising_canary_inputs,
+    verify_denoising_canary_artifact,
+)
+from rpe.methods.classical.peaks import (
+    DetectedPeak1D,
+    PeakDetectionRunResult,
+    PeakRunStatus,
+    PeakWarning,
+    PeakWrapperError,
+    peak_document,
+    run_peak_detection_system,
+)
+from rpe.methods.classical.peaks_canary import (
+    PeakCanaryError,
+    PeakCanarySummary,
+    build_peak_canary_artifact,
+    load_peak_canary_config,
+    load_peak_canary_sources,
+    verify_peak_canary_artifact,
+)
+
+
+__all__ = [
+    "BaselineCanaryError",
+    "BaselineCanarySource",
+    "BaselineCanarySummary",
+    "BaselineRunResult",
+    "BaselineRunStatus",
+    "BaselineWrapperError",
+    "DenoisingCanaryError",
+    "DenoisingCanarySummary",
+    "DenoisingFitContext",
+    "DenoisingFitError",
+    "DenoisingRunResult",
+    "DenoisingRunStatus",
+    "DenoisingWarning",
+    "DenoisingWrapperError",
+    "FittedDenoiser",
+    "DetectedPeak1D",
+    "PeakCanaryError",
+    "PeakCanarySummary",
+    "PeakDetectionRunResult",
+    "PeakRunStatus",
+    "PeakWarning",
+    "PeakWrapperError",
+    "CapturedWarning",
+    "build_baseline_canary_from_sources",
+    "build_denoising_canary_artifact",
+    "build_peak_canary_artifact",
+    "fit_denoising_system",
+    "load_denoising_canary_config",
+    "load_denoising_canary_inputs",
+    "load_peak_canary_config",
+    "load_peak_canary_sources",
+    "load_rruff_baseline_canary_sources",
+    "run_stateless_denoising_system",
+    "run_baseline_system",
+    "run_peak_detection_system",
+    "peak_document",
+    "transform_fitted_denoiser",
+    "verify_baseline_canary_artifact",
+    "verify_denoising_canary_artifact",
+    "verify_peak_canary_artifact",
+]

@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this code or its results, please cite the paper below."
+title: "Raman_quality_measure: code and aggregate results for a task-based evaluation of Raman spectral quality measures"
+type: software
+license: MIT
+authors:
+  - family-names: Qin
+    given-names: Xiuyi
+    affiliation: Independent Researcher
+repository-code: "https://github.com/PuppyQ08/Raman_quality_measure"
+keywords:
+  - Raman spectroscopy
+  - spectral quality
+  - controlled perturbations
+  - metric evaluation
+preferred-citation:
+  type: article
+  title: "A Task-Based Framework for Evaluating Raman Spectral Quality Measures"
+  authors:
+    - family-names: Qin
+      given-names: Xiuyi
+      affiliation: Independent Researcher
+  year: 2026
+  notes: "Preprint"

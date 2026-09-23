@@ -1,0 +1,7 @@
+# Side outputs of the builders that are not used by the paper
+/figures/*.pdf
+/figures/*.png
+/source_receipts.json
+/asset_validation.json
+/provenance/*
+!/provenance/v4_assets.json

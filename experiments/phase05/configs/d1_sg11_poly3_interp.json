@@ -1,0 +1,1 @@
+{"condition_id":"released_input_plus_sg","input_condition_id":"released_input_control","output_dtype":"float32","pipeline_id":"sg11_poly3_interp","schema_version":"phase05-classical-pipeline-v1","steps":[{"array_axis":-1,"coordinate_mode":"index","deriv":0,"mode":"interp","operation":"savitzky_golay","polyorder":3,"window_length":11}]}

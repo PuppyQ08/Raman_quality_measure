@@ -1,0 +1,32 @@
+{
+  "inputs": {
+    "data/table_s1_full_alignment.csv": "8ae3088ada91086a2fbb0b3da8e9aaace4b5caa15cb279c341a07877308d2068",
+    "data/table_s2_protocol_interactions.csv": "27ad35df9f6290ff9c8243ab6eac6074cc030005426fb82cb6172a7fb0886ffc",
+    "data/figure1_response_data.csv": "4783affe7c751d5f0473a379a1d03dedb1e1fd1b7db27e2a148419fd05153709",
+    "data/figure1_protocol_effect_data.csv": "55eafd2e791189d9699c47b4d0b93c25f878792b571b263e9f1e59b9465c1639",
+    "data/w1_robustness/alignment_summary.csv": "47bd39f266b8a316b0278790fb74acc330e4bc312e4a1c60125511fe8b2aa692",
+    "data/v4/mae_oc_pair_diagnostic.csv": "6c866caa80b7f16e4509dbf86afbd4d454a9f31ac53a5dc8f98c256c9c76248f"
+  },
+  "alignment_rows": 143,
+  "w1_robustness_rows": 44,
+  "experiments_rerun": false,
+  "framework_curves": "Schematic illustrations, not measured fits",
+  "protocol_display_mapping": {
+    "a": "Fixed",
+    "b": "Adapted"
+  },
+  "metric_group_order": [
+    "rmse",
+    "mae",
+    "nmse",
+    "sam",
+    "pearson_r",
+    "wasserstein_1_cm1",
+    "is_like_structure_to_noise",
+    "precision",
+    "recall",
+    "f1",
+    "artifact_peak_ratio",
+    "missing_peak_ratio"
+  ]
+}

@@ -1,0 +1,25 @@
+# Local environments
+.venv/
+venv/
+
+# Python caches
+__pycache__/
+*.py[cod]
+.coverage
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Downloaded source archives, unified stores, and record-level outputs
+/data/
+/results/
+
+# Interrupted downloads and logs
+*.part
+*.log
+*.status
+
+# Editor and OS files
+.DS_Store
+*.swp
+*~
