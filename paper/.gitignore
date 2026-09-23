@@ -5,3 +5,4 @@
 /asset_validation.json
 /provenance/*
 !/provenance/v4_assets.json
+!/provenance/v5_figures.json

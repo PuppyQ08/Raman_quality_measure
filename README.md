@@ -24,7 +24,9 @@ identification), with downstream models fitted to unperturbed spectra
 
 No third-party spectra are redistributed here. The repository contains every
 aggregate number shown in the paper, the code that produced them, and scripts
-that download and checksum-verify the source datasets.
+that download and checksum-verify the source datasets. For an illustrated,
+less technical walkthrough of the methods and results, see
+[docs/methods_results_explained_en.md](docs/methods_results_explained_en.md).
 
 ## Contents
 
@@ -48,7 +50,7 @@ Raman_quality_measure/
 ├── reports/robustness/w1_axis/  aggregate results of the axis/representation controls
 ├── reports/phase2/, phase3/     design records the peak-detector catalog verifies by checksum
 ├── metadata/sources.json  official URLs, sizes, and SHA-256 of the source archives
-├── docs/DATA.md           source download, verification, and conversion guide
+├── docs/                  illustrated methods/results guide; data download guide (DATA.md)
 ├── tests/                 unit, contract, and fixture-based tests
 ├── env/                   pinned dependency locks
 └── LICENSE                MIT
@@ -178,7 +180,7 @@ Read the code in the order the paper introduces its ideas.
    protocol effects *G_p* and metric interactions, and
    `phase6_publication_core.py` writes the 143-row summary used in the paper.
 
-6. **Axis and representation controls** (paper §3.5, Fig. 4, SI §S5)
+6. **Axis and representation controls** (paper §3.5, Fig. 6, SI §S5)
 
    `rpe/runner/w1_axis_common_grid.py` recomputes all measures on a common
    wavenumber grid, `w1_axis_robustness.py` removes the axis families and
@@ -217,13 +219,13 @@ not contribute results to the paper.
 
 | Paper item | Aggregate data | Builder |
 |---|---|---|
-| Fig. 1 (framework schematic) | none (illustrative) | `paper/build_v4_assets.py` |
-| Fig. 2, SI §S3 (143-row matrix), SI Table S4 (native W1 contrasts) | `paper/data/table_s1_full_alignment.csv` | `build_assets.py` → `build_v4_assets.py` |
+| Figs. 1–3 (framework, perturbation and AG/OC illustrations) | none (schematic or synthetic) | `paper/build_v5_figures.py` |
+| Fig. 4, SI §S3 (143-row matrix), SI Table S4 (native W1 contrasts) | `paper/data/table_s1_full_alignment.csv` | `build_assets.py` → `build_v4_assets.py` |
 | SI Table S2 (representative contrasts) | `paper/data/table_s1_full_alignment.csv` | `build_profiles.py` |
-| Fig. 3 (task-harm responses) | `paper/data/figure1_response_data.csv` | `build_v4_assets.py` |
+| Fig. 5 (task-harm responses) | `paper/data/figure1_response_data.csv` | `build_v4_assets.py` |
 | SI Table S3 (protocol effects *G_p*) | `paper/data/figure1_protocol_effect_data.csv` | `build_assets.py` |
-| Fig. 4c,d (W1 interactions) | `paper/data/table_s2_protocol_interactions.csv` | `build_v4_assets.py` |
-| Fig. 4a,b, SI Table S5 (33 W1 control contrasts) | `reports/robustness/w1_axis/alignment_summary.csv` (572 rows) | `build_w1_robustness.py` |
+| Fig. 6c,d (W1 interactions) | `paper/data/table_s2_protocol_interactions.csv` | `build_v4_assets.py` |
+| Fig. 6a,b, SI Table S5 (33 W1 control contrasts) | `reports/robustness/w1_axis/alignment_summary.csv` (572 rows) | `build_w1_robustness.py` |
 | SI Table S6 (AG family contributions) | `reports/robustness/w1_axis/ag_family_decomposition.csv` | `build_w1_robustness.py` |
 | OC pair-group decomposition (SI §S5) | `reports/robustness/w1_axis/oc_group_summary.csv` | text |
 | SI Table S7 (axis harm shares) | `reports/robustness/w1_axis/task_harm_shares.csv` | `build_w1_robustness.py` |

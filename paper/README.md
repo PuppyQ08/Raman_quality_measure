@@ -12,7 +12,7 @@ cd paper
 make assets PYTHON=../.venv/bin/python
 ```
 
-The builders need NumPy and Matplotlib and run in a few seconds:
+The five builders need NumPy and Matplotlib and run in a few seconds:
 
 | Builder | Reads | Writes |
 |---|---|---|
@@ -20,6 +20,7 @@ The builders need NumPy and Matplotlib and run in a few seconds:
 | `build_profiles.py` | `data/table_s1_full_alignment.csv` | `tables/representative_contrasts.tex`, `data/metric_profiles_v2.csv` |
 | `build_w1_robustness.py` | `../reports/robustness/w1_axis/*.csv`, checked against its `SHA256SUMS` and copied to `data/w1_robustness/` | `tables/w1_robustness.tex`, `tables/w1_axis_harm_shares.tex`, `tables/w1_ag_family_example.tex` |
 | `build_v4_assets.py` | the files above | `figures/v4/*.pdf`, `figures/v4/*.png`, `tables/v4/*.tex`, `provenance/v4_assets.json` |
+| `build_v5_figures.py` | synthetic teaching data only | `figures/v5/*.pdf`, `figures/v5/*.png`, `provenance/v5_figures.json` |
 
 The first three builders write row tables with the identifiers used during
 execution (protocol A/B, `Acc`). `build_v4_assets.py` converts them to the
@@ -27,14 +28,17 @@ paper's names (Fixed/Adapted, OC) without changing any number. A rebuild
 reproduces `tables/v4/*.tex`, `data/`, and `provenance/v4_assets.json` byte for
 byte; figure files can differ at the byte level across Matplotlib versions.
 Side outputs of the first three builders (legacy figures and receipts) are
-ignored by Git.
+ignored by Git, and `figures/v4/framework.pdf` is superseded by
+`figures/v5/framework.pdf`.
 
 | Output | Paper item |
 |---|---|
-| `figures/v4/framework.pdf` | Figure 1 (schematic; its curves are illustrative) |
-| `figures/v4/alignment.pdf` | Figure 2 |
-| `figures/v4/responses.pdf` | Figure 3 |
-| `figures/v4/w1_comparison.pdf` | Figure 4 |
+| `figures/v5/framework.pdf` | Figure 1 (schematic) |
+| `figures/v5/perturbations.pdf` | Figure 2 (synthetic teaching examples) |
+| `figures/v5/ag_oc.pdf` | Figure 3 (synthetic teaching examples) |
+| `figures/v4/alignment.pdf` | Figure 4 |
+| `figures/v4/responses.pdf` | Figure 5 |
+| `figures/v4/w1_comparison.pdf` | Figure 6 |
 | `tables/v4/representative_contrasts.tex` | SI Table S2 |
 | `tables/v4/full_alignment.tex` | SI Section S3 (all 143 rows) |
 | `tables/v4/protocol_effects.tex` | SI Table S3 |
@@ -82,7 +86,7 @@ profile over AG and OC.
 
 - `data/figure1_response_data.csv` (440 rows): mean MSE metric harm
   (`metric_x`) and task harm (`downstream_harm`) for each cell, protocol,
-  perturbation, and strength (Figure 3).
+  perturbation, and strength (Figure 5).
 - `data/figure1_protocol_effect_data.csv` (225 rows): protocol effects
   `g_harm` = mean(task harm Fixed − task harm Adapted). Rows with
   `summary_type = integrated` average over strengths (SI Table S3); the others
@@ -91,7 +95,7 @@ profile over AG and OC.
   `delta_acc` are each measure's own change in AG and OC from Fixed to Adapted
   (Adapted minus Fixed). For candidates, `i_ag` and `i_acc` are the
   interactions I = Δ(Adapted) − Δ(Fixed) of the MSE-relative contrasts
-  (Figure 4c,d). Each paired endpoint forms a 29-test Holm family.
+  (Figure 6c,d). Each paired endpoint forms a 29-test Holm family.
 
 ### Axis and representation controls
 

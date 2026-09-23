@@ -1,0 +1,19 @@
+{
+  "figures": [
+    "ag_oc.pdf",
+    "framework.pdf",
+    "perturbations.pdf"
+  ],
+  "design_source": "docs/methods_results_explained_en.md figures 1, 2, 5, 6",
+  "synthetic_teaching_data": true,
+  "experiments_rerun": false,
+  "illustrative_ag": [
+    0.002,
+    0.762
+  ],
+  "outputs": {
+    "ag_oc.png": "3bcd50167ec580d35ebaa447c86165cd9857c4a11416f06e77a149db1eb4c99d",
+    "framework.png": "78e58839d5aefd8add41c00421939fe1335ae48d7f45a7695a8f29758e7b88ed",
+    "perturbations.png": "5be932c557b385b9bbc054a767bf2dba2822710bc809c7f2e2e2344c5430da84"
+  }
+}
